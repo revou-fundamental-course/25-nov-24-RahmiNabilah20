@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator BMI byNara</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-    <!-- Judul Website -->
+    <!-- Header Section -->
     <header class="main-header">
         <h1>Kalkulator BMI</h1>
     </header>
@@ -18,49 +18,44 @@
         <section class="main-section">
             <!-- Main Article -->
         <article>
-            <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. <br>
+                Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+            </p>
         </article>
 
         <!-- Main Form -->
-        <form>
-            <div class="radio-group">
-                <label for="gender-male">Jenis Kelamin</label>
-                <br>
-                <input type="radio" id="gender-male" name="gender" value="Pria" checked required>
-                <label for="gender-male">
-                    Pria
-                </label>
-                <br>
-                <input type="radio" id="gender-female" name="gender" value="Wanita" required>
-                <label for="gender-female">
-                    Wanita
-                </label>
+        <form id="bmi-form">
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin:</label><br>
+                <input type="radio" id="gender-male" name="gender" value="Pria" checked> Pria
+                <input type="radio" id="gender-female" name="gender" value="Wanita"> Wanita
             </div>
 
-            <div class="form-item">
+            <div class="form-group">
                 <label for="berat-badan-input">
-                    Berat Badan (kg)
+                    Berat Badan (kg):
                 </label>
                 <input type="number" id="berat-badan-input" required/>
             </div>
 
-            <div class="form-item">
+            <div class="form-group">
                 <label for="usia-input">
-                    Usia (tahun)
+                    Usia (tahun):
                 </label>
                 <input type="number" id="usia-input" required/>
             </div>
 
-            <div class="form-item">
+            <div class="form-group">
                 <label for="tinggi-badan-input">
-                    Tinggi Badan (cm)
+                    Tinggi Badan (cm):
                 </label>
                 <input type="number" id="tinggi-badan-input" required/>
             </div>
 
             <div class="form-button-container">
-                <button type="button" class="bg-indian-red color-azure" onclick="validateform();">Hitung BMI</button>
-                <button class="bg-brown color-azure">Reset</button>
+                <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                <button>Reset</button>
             </div>
         </form>
 
@@ -70,33 +65,63 @@
                 <h3>Keunggulan Fitur</h3>
             </header>
 
-            <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <u1>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak </li>
+                    <li>Mempersiapkan program penurunan berat badan </li>
+                </u1>
+                 
+                <p> Kalkulator ini hanya boleh digunaan oleh orang dewasa (wanita hamil atau menyusui tidak boleh
+                    mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+                    selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                </p>
+
+                <p> Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai 
+                    umum, indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (kg) dibagi
+                    dengan kuadrat tinggi badan Anda (m) atau BMI = kg/m^2
+                </p>
         </article>
         </section>
         
         <!-- Section Hasil Kalkulasi -->
-        <section class="main-section">
-            <div>
+        <section class="result-section">
+            <div id="result-container">
                 <header>
                     <h2>Hasil</h2>
                 </header>
-
-                <p>Berat Badan Lebih</p>
-
-                <div id="result calculation">0</div>
-
-                <p id="info-result">Anda memiliki berat badan</p> 
+                <p id="bmi-value">BMI: -</p>
+                <p id="bmi-category">Kategori: -</p>
+                <button onclick="downloadResult()">Download Hasil BMI</button>
             </div>
 
             <!-- Third Article -->
             <article>
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <h3>Rekomendasi</h3>
+                <p id="bmi-advice">Rekomendasi akan muncul di sini berdasarkan hasil BMI Anda.</p>
             </article>
+        </section>
+
+        <section class="info-section">
+            <h3>Beberapa Penyakit yang Bersaal dari Kegemukan</h3>
+            <u1>
+                <li>Diabetes</li>
+                <li>Hipertensi</li>
+                <li>Sakit Jantung</li>
+                <li>Osteoarthritis</li>
+            </u1>
+
+            <div class="consultation-button">
+                <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button>Registrasi Online Sekarang</button>
+            </div>
         </section>
     </main>
 
     <!-- Footer Website -->
     <footer>
+        <p>Download Aplikasi:</p>
+        <img src="https://digitopoly.org/wp-content/uploads/2016/06/app-store-logo.png" alt="App Store">
+        <img src="https://www.freepnglogos.com/uploads/play-store-logo-png/google-play-store-logo-keyword-the-amazon-insider-podcast-6.png" alt="Google Play">
         <p>Made by Rahmi Nabilah@2024</p>
     </footer>
 
