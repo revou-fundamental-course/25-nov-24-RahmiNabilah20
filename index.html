@@ -23,29 +23,43 @@
 
         <!-- Main Form -->
         <form>
+            <div class="radio-group">
+                <label for="gender-male">Jenis Kelamin</label>
+                <br>
+                <input type="radio" id="gender-male" name="gender" value="Pria" checked required>
+                <label for="gender-male">
+                    Pria
+                </label>
+                <br>
+                <input type="radio" id="gender-female" name="gender" value="Wanita" required>
+                <label for="gender-female">
+                    Wanita
+                </label>
+            </div>
+
             <div class="form-item">
                 <label for="berat-badan-input">
                     Berat Badan (kg)
                 </label>
-                <input type="number" id="berat-badan-input"/>
+                <input type="number" id="berat-badan-input" required/>
             </div>
 
             <div class="form-item">
                 <label for="usia-input">
                     Usia (tahun)
                 </label>
-                <input type="number" id="usia-input"/>
+                <input type="number" id="usia-input" required/>
             </div>
 
             <div class="form-item">
                 <label for="tinggi-badan-input">
                     Tinggi Badan (cm)
                 </label>
-                <input type="number" id="tinggi-badan-input"/>
+                <input type="number" id="tinggi-badan-input" required/>
             </div>
 
             <div class="form-button-container">
-                <button class="bg-indian-red color-azure">Hitung BMI</button>
+                <button type="button" class="bg-indian-red color-azure" onclick="validateform();">Hitung BMI</button>
                 <button class="bg-brown color-azure">Reset</button>
             </div>
         </form>
@@ -85,5 +99,7 @@
     <footer>
         <p>Made by Rahmi Nabilah@2024</p>
     </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
